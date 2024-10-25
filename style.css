@@ -29,8 +29,8 @@ body, html {
 }
 
 #setTimerScreen, #analogTimerScreen {
-    background-color: #fff;
-    color: #000;
+    background-color: #333;
+    color: white;
 }
 
 /* Grundläggande knappar och input */
@@ -38,6 +38,8 @@ button, input {
     padding: 10px 20px;
     margin: 5px;
     font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
 }
 
 /* Analoga Klockan */
@@ -76,6 +78,8 @@ button, input {
 /* Digitala klockan */ 
 #digitalTimerScreen {
     text-align: center;
+    background-color: #333;
+    color: white;
 }
 
 #digitalTimeDisplay {
@@ -85,6 +89,11 @@ button, input {
 
 #cancelDigitalTimer {
     margin-top: 20px;
+}
+
+#alarmScreen {
+    background-color: #333;
+    color: white;
 }
 
 /* Menyikonen */
