@@ -1,0 +1,126 @@
+/* Grundläggande styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.screen {
+    display: none; /* Gömmer alla skärmar initialt */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.screen.visible {
+    display: flex; /* Endast den synliga skärmen visas */
+}
+
+#loadingScreen {
+    background-color: #333;
+    color: white;
+}
+
+#setTimerScreen, #analogTimerScreen {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Grundläggande knappar och input */
+button, input {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+}
+
+/* Analoga Klockan */
+.clock {
+    width: 200px;
+    height: 200px;
+    border: 5px solid black;
+    border-radius: 50%;
+    position: relative;
+    margin: 20px auto;
+    background-color: white;
+}
+
+.hand {
+    position: absolute;
+    width: 50%;
+    height: 6px;
+    background-color: black;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0% 50%; /* Ändrar basen till mitten på klockan */
+    transform: rotate(-90deg); /* Starta från kl 12 */
+    transition: transform 0.05s ease-in-out;
+}
+
+.minute-hand {
+    height: 8px;
+    background-color: black;
+}
+
+.second-hand {
+    background-color: red;
+    transform: rotate(-90deg);
+}
+
+/* Digitala klockan */ 
+#digitalTimerScreen {
+    text-align: center;
+}
+
+#digitalTimeDisplay {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+#cancelDigitalTimer {
+    margin-top: 20px;
+}
+
+/* Menyikonen */
+.menu-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+/* Menyn */
+.menu {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: block;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu ul li {
+    margin: 5px 0;
+}
+
+/* Klassen som visar/döljer menyn */
+.hidden {
+    display: none;
+}
+
+/* Klass för att visa skärmar */
+.screen.visible {
+    display: flex;
+}
